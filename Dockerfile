@@ -13,4 +13,4 @@ RUN python manage.py collectstatic --noinput
 #CMD ["python", "manage.py", "runserver", "0:8000"]
 CMD ["gunicorn", "--bind", "0:8000", "django_project_doit.wsgi:application"]
 
-#EXPOSE 8000
+EXPOSE 8000
