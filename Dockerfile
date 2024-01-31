@@ -1,5 +1,7 @@
 FROM python:3.12.1
 
+ENV PYTHONUNBUFFERED = 1
+
 WORKDIR /usr/src/app
 
 COPY requirements.txt .
