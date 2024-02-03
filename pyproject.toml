@@ -1,18 +1,14 @@
 [tool.poetry]
-name = "django-study-doit"
+name = "203 django-study-doit"
 version = "0.1.0"
 description = ""
-authors = ["주현(백엔드개발1팀) <rich@hanssem.com>"]
+authors = ["creedboy <polozh@naver.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.12.1"
-sqlparse = "0.4.4"
-asgiref = "3.7.2"
-packaging = "23.2"
-tzdata = "2023.4"
-gunicorn = "^21.2.0"
+python = "^3.12"
 django = "^5.0.1"
+mysqlclient = "^2.2.1"
 
 
 [build-system]
