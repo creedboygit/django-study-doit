@@ -14,7 +14,9 @@ COPY . .
 # collectstatic 실행
 RUN python manage.py collectstatic --noinput
 
-RUN apt-get update && apt-get install -y vim
+RUN apt-get update
+RUN apt-get install -y vim
+RUN apt-get install inetutils-ping
 
 #CMD ["python", "manage.py", "runserver", "0:8000"]
 CMD ["gunicorn", "--bind", "0:8000", "django_project_doit.wsgi:application"]
