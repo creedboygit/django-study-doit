@@ -20,10 +20,14 @@ services:
 #    networks:
 #      - django-network
     healthcheck:
-      test: ['CMD-SHELL', 'mysqladmin ping -h 127.0.0.1 -u root --password=$$MYSQL_ROOT_PASSWORD']
-      interval: 10s
-      timeout: 2s
-      retries: 100
+#      test: ['CMD-SHELL', 'mysqladmin ping -h 127.0.0.1 -u root --password=$$MYSQL_ROOT_PASSWORD']
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+#      interval: 10s
+#      timeout: 2s
+#      retries: 100
+      interval: 1m30s
+      timeout: 30s
+      retries: 10
 
   app:
     restart: always
