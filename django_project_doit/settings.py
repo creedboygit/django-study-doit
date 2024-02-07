@@ -46,7 +46,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-CSRF_TRUSTED_ORIGINS = ["django.netscrap.co.kr", "http://django.netscrap.co.kr", "https://django.netscrap.co.kr"]
+CSRF_TRUSTED_ORIGINS = ["http://django.netscrap.co.kr", "https://django.netscrap.co.kr"]
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 
