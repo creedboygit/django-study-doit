@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
 from pathlib import Path
-# from . import local_settings
+from . import local_settings
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,24 +21,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = local_settings.SECRET_KEY
-# DATABASES = local_settings.DATABASES
+SECRET_KEY = local_settings.SECRET_KEY
+DATABASES = local_settings.DATABASES
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'valletta',
-        'USER': 'root',
-        'PASSWORD': '1234',
-        # 'HOST': 'localhost',
-        # 'HOST': '127.0.0.1',
-        'HOST': 'db',
-        # 'default-character-set': 'utf8',
-        'PORT': '3306'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'valletta',
+#         'USER': 'root',
+#         'PASSWORD': '1234',
+#         # 'HOST': 'localhost',
+#         # 'HOST': '127.0.0.1',
+#         'HOST': 'db',
+#         # 'default-character-set': 'utf8',
+#         'PORT': '3306'
+#     }
+# }
 
-SECRET_KEY = 'django-insecure-o9$*u=judzn_fn0!7unb5s_&ay*(nqv!2o18v%13mq=^n0a_-1'
+# SECRET_KEY = 'django-insecure-o9$*u=judzn_fn0!7unb5s_&ay*(nqv!2o18v%13mq=^n0a_-1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
