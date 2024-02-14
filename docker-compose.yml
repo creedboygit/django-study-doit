@@ -30,6 +30,7 @@ services:
       retries: 100
 
   app:
+    image: richlegend/djangoappimage:latest
     restart: always
     build:
       context: .
